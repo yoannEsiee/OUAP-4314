@@ -1,5 +1,6 @@
 
 import requests
+import re
 
 class req:
     def __init__(self):
@@ -9,8 +10,8 @@ class req:
     def Connected(self,url):
 	response = requests.get(url, headers=self.headers, timeout=self.timeout)
 
-	x =response.delate_space(response.text)
-	x = response.delete_caractere(response.text)
+	x = self.delete_space(response.text)
+	x = self.delete_caractere(x)
 	return x
 	
     def delete_space(self,code):
@@ -19,7 +20,7 @@ class req:
 	
     def delete_caractere(self,code):
 	#regex = [^A-Za-Z0-9]+
-	code = Regex.Replace(code, "[^a-zA-Z0-9_]", "");
+	code = re.sub(code, "[^a-zA-Z0-9_]", "");
 	return code
 	
 
