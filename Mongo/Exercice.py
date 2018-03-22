@@ -12,9 +12,9 @@ collection.find_one()
 
 df = pd.read_csv("data/ks-projects-201801-sample.csv") 
 
-#objects = df.to_json(orient="records") 
+objects = df.to_json(orient="records") # On tranforme en objet
 
-collection.insert_many(df)
+collection.insert_many(objects)
 
 #recupérer les 5 projets ayant reçu le plus de promesses de dons
 
