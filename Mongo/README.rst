@@ -674,8 +674,8 @@ Maintenant pour récupérer les résultats du Map->Reduce :
         )
         
         
-API Python
-----------
+API Python 
+A installer dans le terminal linux pour pouvoir utiliser mongo dans un script python----------
 
 Il existe une API Python développée pour interagir avec une base de données MongoDB. Ce package s'appelle `pymongo`  https://docs.mongodb.com/getting-started/python/client/. Il est important d'avoir des APIs dans les différents langages pour faciliter l'intégration dans les applications. 
 
